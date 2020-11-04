@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS clip view</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <!-- imports -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>JS clip view</header>
+    <!-- top controls -->
+    <div class="controls">
+        <input type="button" value="load clipboard" id="loadBut">
+        <div>
+            Type: 
+            <select id="typeSelect">
+                <option value="">none</option>
+            </select>
+        </div>
+        <input type="button" value="save clipboard" id="saveBut">
+    </div>
+    <!-- view area -->
+    <div class="data">
+        <textarea id="dataIn">please load your clipboard</textarea>
+        <img src="" alt="" id="imgIn">
+    </div>
+    <!-- bottom controls -->
+    <div class="controls">
+        <input type="button" value="copy text" id="copyTxtBut">
+        <div>
+            Size: 
+            <span id="sizeDisplay">0</span>
+            bytes
+        </div>
+    </div>
+<!-- scripts -->
+<script src="script.js"></script>
+</body>
+</html>

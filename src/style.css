@@ -1,3 +1,17 @@
+:root{
+    --background: #fff;
+    --header-background: #f5f5dc;
+    --header-border: #000;
+    --text-color: #000;
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background: #111;
+        --header-background: #222;
+        --header-border: #fff;
+        --text-color: #eee;
+    }
+}
 html,body{
     margin: 0;
     padding: 0;
@@ -8,12 +22,14 @@ body{
 
     display: flex;
     flex-direction: column;
+
+    background: var(--background);
 }
 header{
     font-size: 1.2rem;
     padding: .2rem;
-    background-color: beige;
-    border-bottom: 1px solid black;
+    background-color: var(--header-background);
+    border-bottom: 1px solid var(--header-border);
 }
 .controls{
     display: flex;
@@ -30,8 +46,14 @@ header{
 }
 .data > *{
     flex-grow: 1;
+    background: #0000;
+    backdrop-filter: invert(.05);
 }
 #dataIn{
+    color: var(--text-color);
     box-sizing: border-box;
     resize: none;
+}
+#imgIn{
+    display: none;
 }
