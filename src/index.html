@@ -11,30 +11,27 @@
 </head>
 <body>
     <header>JS clip view</header>
-    <!-- top controls -->
+    <!-- controls -->
     <div class="controls">
         <input type="button" value="load clipboard" id="loadBut">
-        <div>
-            Type: 
+        <input type="button" value="save clipboard" id="saveBut">
+        <input type="button" value="copy text only" id="copyTxtBut">
+        <div class="control-group">
+            <label for="typeSelect">Type: </label>
             <select id="typeSelect">
                 <option value="">none</option>
             </select>
         </div>
-        <input type="button" value="save clipboard" id="saveBut">
-    </div>
-    <!-- view area -->
-    <div class="data">
-        <textarea id="dataIn">please load your clipboard</textarea>
-        <img src="" alt="" id="imgIn">
-    </div>
-    <!-- bottom controls -->
-    <div class="controls">
-        <input type="button" value="copy text" id="copyTxtBut">
-        <div>
+        <div class="control-group">
             Size: 
             <span id="sizeDisplay">0</span>
             bytes
         </div>
+    </div>
+    <!-- view area -->
+    <div class="data">
+        <textarea id="dataIn" placeholder="please load your clipboard" cols="30" rows="10"></textarea>
+        <img src="" alt="" id="imgIn">
     </div>
 <!-- scripts -->
 <script src="script.js"></script>

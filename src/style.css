@@ -1,14 +1,14 @@
 :root{
     --background: #fff;
     --header-background: #f5f5dc;
-    --header-border: #000;
+    --border: #000;
     --text-color: #000;
 }
 @media (prefers-color-scheme: dark) {
     :root{
         --background: #111;
         --header-background: #222;
-        --header-border: #fff;
+        --border: #fff;
         --text-color: #eee;
     }
 }
@@ -18,7 +18,7 @@ html,body{
 }
 body{
     font-family: 'Roboto', 'Droid Sans', sans-serif;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 
     display: flex;
     flex-direction: column;
@@ -29,11 +29,12 @@ header{
     font-size: 1.2rem;
     padding: .2rem;
     background-color: var(--header-background);
-    border-bottom: 1px solid var(--header-border);
+    border-bottom: 1px solid var(--border);
 }
 .controls{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .controls > *{
     padding: 0.2rem;
@@ -56,4 +57,16 @@ header{
 }
 #imgIn{
     display: none;
+}
+
+input[type="button"]{
+    background: #0000;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+}
+.control-group{
+    border: 2px solid var(--border);
+    border-radius: 6px;
 }

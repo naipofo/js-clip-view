@@ -52,3 +52,9 @@ function loadData(e) {
         console.log(blob);
     });
 }
+
+// website size stuff
+window.addEventListener('resize', ()=>sizeFun());
+function sizeFun(){
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
