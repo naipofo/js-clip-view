@@ -1,0 +1,37 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', 'Droid Sans', sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+header{
+    font-size: 1.2rem;
+    padding: .2rem;
+    background-color: beige;
+    border-bottom: 1px solid black;
+}
+.controls{
+    display: flex;
+    flex-wrap: wrap;
+}
+.controls > *{
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+.data{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.data > *{
+    flex-grow: 1;
+}
+#dataIn{
+    box-sizing: border-box;
+    resize: none;
+}

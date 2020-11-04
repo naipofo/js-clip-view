@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS clip view</title>
+    <!-- imports -->
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <header>JS clip view</header>
+
+    <div class="controls">
+        <input type="button" value="load clipboard" id="loadBut">
+        <input type="button" value="save clipboard" id="saveBut">
+        <div>
+            Format: <select id="formatselect">
+                <option value="html">html</option>
+                <option value="CF_UNICODE_TEXT">CF_UNICODE_TEXT</option>
+                <option value="CF_TEXT">CF_TEXT</option>
+                <option value="CF_OEMTEXT">CF_OEMTEXT</option>
+            </select>
+        </div>
+    </div>
+    <div class="data">
+        <textarea id="dataIn">
+Version:0.9
+StartHTML:0000000105
+EndHTML:0000000940
+StartFragment:0000000141
+EndFragment:0000000904
+&lt;html&gt;
+&lt;body&gt;
+&lt;!--StartFragment--&gt;&lt;div style=&quot;color: #ffffff;background-color: #2d2b55;font-family: Consolas, 'Courier New', monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #9effff;&quot;&gt;&amp;lt;div&amp;#160;&lt;/span&gt;&lt;span style=&quot;color: #fad000;font-style: italic;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #e1efff;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #92fc79;&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color: #a5ff90;&quot;&gt;data&lt;/span&gt;&lt;span style=&quot;color: #92fc79;&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color: #9effff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style=&quot;color: #9effff;&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;!--EndFragment--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </textarea>
+    </div>
+<!-- scripts -->
+<script src="src/script.js"></script>
+</body>
+</html>
