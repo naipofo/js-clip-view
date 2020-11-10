@@ -4,7 +4,7 @@ let reader = new FileReader();
 typeSelect.addEventListener('input', e=>loadData(e))
 
 loadBut.addEventListener('click', ()=>{
-    navigator.clipboard.read().then(clipData => {
+    navigator.clipboard.read({raw: rawSelect.checked}).then(clipData => {
         clip = clipData[0];
         generateList(clipData[0].types);
         console.log(clipData);
@@ -12,7 +12,9 @@ loadBut.addEventListener('click', ()=>{
 })
 
 saveBut.addEventListener('click', ()=>{
-    navigator.clipboard.write([new ClipboardItem({ [typeSelect.value]: new Blob([dataIn.value], {type: typeSelect.value})})])
+    navigator.clipboard.write([new ClipboardItem({
+        [typeSelect.value]: new Blob([dataIn.value], {type: typeSelect.value})
+    },{raw: rawSelect.checked})])
 })
 
 copyTxtBut.addEventListener('click', ()=>navigator.clipboard.writeText(dataIn.value))
